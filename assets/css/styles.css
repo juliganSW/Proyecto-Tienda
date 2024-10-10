@@ -163,6 +163,7 @@ input::placeholder {
   display: flex;
   align-items: center;
   justify-content:space-evenly;
+  background-position: center start;
   width: 100%;
   height: 100vh;
   margin-top: 2.5rem;
@@ -174,16 +175,15 @@ input::placeholder {
 }
 .contenedor__secundario{
   img{
-  margin-top: 3rem;
-   width:28rem;
-   filter:brightness(0.8);
-  
+   margin-top: 2.5rem;
+   width: 18rem;
    z-index: 5;
-  }
+   }
 }
 
 .contenedor {
   img {
+    margin-top:1.5rem;
     width: 30rem;
     z-index: 5; /* para que quede por encima del overlay*/
     }
@@ -214,44 +214,43 @@ input::placeholder {
   z-index: 5; /* Contenido por encima del video/imagen */
   color: rgb(255, 255, 255);
   font-optical-sizing: auto;
-}
+  
+  padding: 1rem;
+ }
 
 .content {
   h1 {
     font-size: 3rem;
-  }
+   }
   p {
-    font-size: 1.5rem;
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
   }
+}
+
+.btnMain, .btnMain_1, .btnComprar {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.625rem 1.25rem;
+  border: 2px solid #BA2C73;
+  width: 180px;
+  cursor: pointer;
+  margin-right: 2rem;
 }
 
 .btnMain {
   background-color: #ba2c7399;
   color: #ffffff;
-  font-size: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 2px solid #BA2C73;
-  width: 25%;
-  cursor: pointer;
   margin-right: 2rem;
 }
 
-.btnMain a {
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.btnMain_1 {
+.btnMain_1, .btnComprar {
   background-color: transparent;
   color: #ffffff;
-  font-size: 1rem;
-  padding: 0.625rem 1.25rem;
-  border: 2px solid #BA2C73;
-  width: 25%;
-  cursor: pointer;
 }
 
-.btnMain_1 a {
+.btnMain a, .btnMain_1 a, .btnComprar a {
   text-decoration: none;
   color: #ffffff;
 }
