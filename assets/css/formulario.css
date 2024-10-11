@@ -28,7 +28,6 @@ body{
 
 .contenedor_img { /*contenedor de la izquierda que aloja a la imagen */
     width: 50%;
-   
     display: flex;
     justify-content: center;
     align-items: center;
