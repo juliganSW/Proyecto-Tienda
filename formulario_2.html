@@ -6,7 +6,7 @@
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!--Link para hoja de estilos-->
-    <link rel="stylesheet" href="./assets/css/formulario.css">
+    <link rel="stylesheet" href="./assets/css/formulario_2.css">
 
 </head>
 <body>
@@ -17,9 +17,9 @@
       </nav>
     </header>
     <main>
-        <section class="contacto">
-            <div class="container d-flex justify-content-center align-items-center">
-                <div class="row">
+        <div class="contacto container d-flex justify-content-center align-items-center">
+          
+                <div class="row ">
                   <div class="col-md-6 d-flex justify-content-center">
                     <!--imagen al costado del formulario-->
                     <div class="contenedor_img">
@@ -45,20 +45,23 @@
                                 <input type="email" class="form-control contacto_input" id="inputEmail">
                              </div>
                              <div class="form_input_linea mb-3">
-                                <label for="inputAsunto" class="form-label">Asunto<span class="asterisk">&nbsp;*</span>&nbsp;:</label>
-                                <select class="form-select form-select-sm" aria-label="Small select example">
-                                    <option selected>Elija una opción</option>
+                                <label for="inputAsunto" class="form-label contacto_label">Asunto</label>
+                                <select class="form-select form-select-sm contacto_input" aria-label="Small select example">
+                                    <option selected >Elija una opción</option>
                                     <option value="1">Soporte</option>
                                     <option value="2">Ventas</option>
                                     <option value="3">Comentarios</option>
                                   </select>
                              </div>
-                             <div class="form-floating mb-3 form_input_linea">
-                                <label for="floatingTextarea" class="contacto_label">Escriba aqui...</label>
-                                <textarea class="form-control contacto_input_textArea" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                             <div class="form-group mb-3">
+                                <label for="textarea" class=" form-label contacto_label">Mensaje</label>
+                                <textarea class="form-control contacto_input" placeholder="Escriba aqui..." id="textarea"></textarea>
                                 
                               </div>
-                            <input type="submit" value="Enviar" class="contacto_submit_boton">
+                              <div class="d-flex justify-content-center">
+                              <input type="submit" value="Enviar" class="contacto_submit_boton">
+                              </div>
+                     
                           </form>
 
                     </div>
@@ -66,9 +69,9 @@
                   </div>
                  
                 </div>
-              </div>
+             
 
-        </section>
+        </div>
     </main>
     <footer>
 

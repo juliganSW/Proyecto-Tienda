@@ -146,6 +146,31 @@ input::placeholder {
   width: 250px;
 }
 
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ajusta según tus necesidades */
+  overflow: hidden;
+}
+
+.slide {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto; /* Asegura que las imágenes mantengan su relación de aspecto */
+  display: block; /* Para eliminar espacio en la parte inferior */
+}
+
+.slider-wrapper{ /* "envoltorio de las imágenes del slider dispuestas en un grid de 3 columnas*/
+    display: grid;
+    grid-template-columns: repeat(3, 100%);
+    transition: transform 1s ease-in-out; /* Transición suave para el efecto del slider */
+}
+
 .contenedor {
   display: flex;
   align-items: center;
@@ -155,11 +180,21 @@ input::placeholder {
   margin-top: 2.5rem;
   position: relative;
   overflow: hidden;
-  background-image: url(../img/mountains-2982087_1280.jpg);
+  background-image: url(../img/imgen1.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+ 
   
 }
+.contenedor {
+  img {
+    margin-top:1.5rem;
+    width: 28rem;
+    z-index: 5; /* para que quede por encima del overlay*/
+  
+    }
+}
+
 .contenedor__secundario{
   display: flex;
   align-items: center;
@@ -170,15 +205,17 @@ input::placeholder {
   margin-top: 2.5rem;
   position: relative;
   overflow: hidden;
-  background-image: url(../img/train-station-7376194_1280.jpg);
+  background-image: url(../img/imagen2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .contenedor__secundario{
   img{
    margin-top: 2.5rem;
    width: 18rem;
    z-index: 5;
+ 
    }
 }
 
@@ -201,25 +238,18 @@ input::placeholder {
    margin-top: 2.5rem;
    width: 16rem;
    z-index: 5;
+   
    }
 }
 
-.contenedor {
-  img {
-    margin-top:1.5rem;
-    width: 30rem;
-    z-index: 5; /* para que quede por encima del overlay*/
-    }
-}
 
-#imagen-fondo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+
+
+
+
+
+
+
 
 .superponer {
   position: absolute;
@@ -249,6 +279,7 @@ input::placeholder {
   margin-top: -1.5rem;
   margin-bottom: 1.5rem;
   font-size: 1.5rem;
+ 
   }
 }
 
@@ -279,6 +310,69 @@ input::placeholder {
   color: #000000;
 }
 
+/***** Seccion destacados****/
+
+.all-products{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.product{
+	overflow: hidden;
+	color: #21201e;
+	text-align: center;
+	width: 240px;
+	height: 400px;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1.2rem;
+	margin: 2rem;
+}
+
+.product .product-title, .product .product-price{
+	font-size: 18px;
+}
+
+.product:hover img{
+	scale:  1.1;
+}
+
+.product:hover {
+	box-shadow: 5px 15px 25px #eeeeee;
+}
+
+.product img {
+	height: 200px;
+	margin: 1rem;
+  
+	transition: all 0.3s;
+}
+
+.product a:link, .product a:visited{
+	color: #ececec;
+	display: inline-block;
+	text-decoration: none;
+	background-color: #2c3e50;
+	padding: 1.2rem 3rem;
+	border-radius: 1rem;
+	margin-top: 1rem;
+	font-size: 14px;
+	transition: all 0.2s;
+}
+
+.product a:hover{
+	transform: scale(1.1);
+}
+
+
+
+
+
+
 /**Estilos sección servicios**/
 .servicios {
   display: grid;
@@ -286,7 +380,7 @@ input::placeholder {
   margin: 0 auto;
   /* Centrar el contenedor */
   align-items: center;
-  background-color: #282f4443;
+  background-color:#676f9d;;
   padding: 1.5rem 0;
 }
 
@@ -342,11 +436,11 @@ input::placeholder {
   bottom: 10px; 
   left: 50%;
   transform: translateX(-50%); /*corrige 50% para la izquierda*/
-  background-color: #ba2c7399;
+  background-color: transparent;
   color: #ffffff;
   font-size: 1rem;
   padding: 0.625rem 1.25rem;
-  border: 1px solid #BA2C73;
+  border: 2px solid #f7b19a;
   width: 30%;
   cursor: pointer;
 }
@@ -388,31 +482,19 @@ input::placeholder {
   transform: scale(1.05);
 }
 
-.categoria h2{
+.categoria h2 {
   position: absolute;
   top: 1rem;
   left: 0;
   right: 0;
-  background: #ba2c7399; /* Fondo semitransparente para el texto */
+  border: 1px solid #f7b19a;
+  background: #ffffff3a; /* Fondo semitransparente para el texto */
   color:#ffffff;
   padding: 0.625rem;
   z-index:1; /* Me aseguro de que el texto quede por encima de la imagen */
   text-align: center;
   font-size: 1.5rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
