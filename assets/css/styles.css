@@ -290,6 +290,13 @@ input::placeholder {
 }
 
 /***** Seccion destacados****/
+.headline {
+  padding-top: 50px; 
+  padding-left: 160px;
+  font-size: 2rem;
+  color:#ffffff;
+  /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra suave negra */
+ }
 
 .all-products{
 	display: flex;
@@ -320,7 +327,7 @@ input::placeholder {
 
 .product-price  {
  font-style:oblique;
- position: relative;/* recordá que esto es relativo a su posicion original*/
+ position: relative;/*recordá que esto es relativo a su posicion original*/
  top: -270px; 
  left: -60px;
  color:#ffffff;
@@ -331,8 +338,8 @@ input::placeholder {
 
  .product-shipping{
   font-style: oblique;
-  color:#ffffff;
-  padding:3px;
+  color:#b1b5c0;
+  padding: 3px;
 }
 
 .product:hover img{
@@ -365,7 +372,7 @@ input::placeholder {
  transform: scale(1.1);
  }
 
-/* estilos para la seccion colecciones*/
+/*estilos para la seccion colecciones*/
 .coleccion-container {
   width: 90%;
   display: grid;
@@ -424,7 +431,7 @@ input::placeholder {
   width: 90%;
   justify-content: center;
   align-items: center;
-  margin: 1rem auto;
+  margin: 16px auto;
   gap: 20px;
 }
 
@@ -434,7 +441,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  transition: 1s;
+  transition:  ease 0.5s;
   cursor: pointer;
  }
 
@@ -446,12 +453,12 @@ input::placeholder {
   transition: 0.5s ease;
 }
 .categoria:hover {
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 .categoria h2 {
   position: absolute;
-  top: 1rem;
+  top: 16px;
   left: 0;
   right: 0;
   border-top: 1px solid #39f2ae;
@@ -472,11 +479,12 @@ input::placeholder {
   margin: 0 auto;/* Centra el contenedor */
   align-items: center;
   background-color:#b1b5c0;
-  padding: 1.5rem 0;
+  padding: 32px 0;
 }
 
 .servicios{
   i{ 
+    padding:28px;
     color:#39f2ae;
     filter:drop-shadow(1px 1px 3px black)
   }
@@ -485,31 +493,27 @@ input::placeholder {
 
 .columna-izq {
   text-align: center;
-  border-right: 1px solid rgba(0, 0, 0, 0.448);
+  border-right: 2px solid rgba(0, 0, 0, 0.448);
 }
 
 .columna-medio {
   text-align: center;
-  border-right: 1px solid rgba(0, 0, 0, 0.448);
+  border-right: 2px solid rgba(0, 0, 0, 0.448);
 }
 
 .columna-der {
   text-align: center;
 }
 
-
-
-
 /*Estilos para el footer*/
 .footer-container {
   display: grid;
-  grid-template: 10rem 10rem 4rem /1fr 1fr 1fr;
+  grid-template: 160px 160px 64px /1fr 1fr 1fr;
   grid-template-areas: "arriba-izq arriba-medio arriba-der"
     "centro-izq centro-medio centro-der"
     "abajo abajo abajo";
   width: 100%;
   gap: 20px;
-  margin: 0 auto;
   background-color: #2f4858;
   color:#b1b5c0
 }
@@ -519,8 +523,7 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
- 
-
+  padding-top:32px;
 }
 
 .arriba-izq ul {
@@ -529,56 +532,53 @@ input::placeholder {
 }
 
 .arriba-izq ul li {
-  padding: 0.8rem;
+  padding: 13px;
 }
 
 .arriba-der {
   grid-area: arriba-der;
-  margin-top: 2rem;
+  padding-top: 32px;
   align-items: center;
-  }
-
+  
+}
 
 .newsletter {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding:16px;
 }
 
 .newsletter i {
-  margin-right: 1rem;
+  margin-right: 16px;
 }
 
 .email-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:10px;
- 
- }
+}
 
 .email-input {
   padding: 8px;
   font-size: 1rem;
+  outline: none;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
   background-color: #30353c;
   color: #ffff;
- 
-}
+ }
 
  .btnEmail {
   background-color: #39f2ae91;
   color: #ffffff;
   font-size: 1rem;
-  padding: 0.625rem 0.5rem;
+  padding: 8px 8px;
   border: 1px solid #39f2ae;
-  border-radius: 0.5rem;
-  width: 30%;
+  border-radius: 8px;
   cursor: pointer;
-  
-}
+  }
 
 .centro-izq {
   grid-area: centro-izq;
@@ -593,8 +593,9 @@ input::placeholder {
 
 .list-title {
   text-align: center;
+  font-size: 1.2rem;
   font-weight: bold;
-  margin-bottom: 0.25rem;
+  margin-bottom: 16px;
   color:#39f2ae;
 }
 
@@ -611,11 +612,12 @@ input::placeholder {
 
 .centro-der {
   grid-area: centro-der;
+ 
   color: #ffffff;
 }
 
 .centro-der img {
-  width: 3rem;
+  width: 78px;
   height: auto;
   padding: 1rem;
 }
@@ -631,7 +633,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   background-color: #3E4C59  ;
-  /*border-top: 1px solid #FF6F61;*/
+  border-top: 1px solid #39f2ae;
 }
 
 .abajo-content {
