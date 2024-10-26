@@ -1,6 +1,6 @@
 /*fuente principal*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
- 
+
 /*reseteo de valores par defecto*/
 * {
   margin: 0;
@@ -9,7 +9,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth;/*suaviza el scroll*/
 }
 
 body {
@@ -21,16 +21,16 @@ body {
 }
 
 .info-bar {
-  background-color: #3E4C59 ;
+  background-color: #3E4C59;
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position:fixed;
+  position: fixed;
   width: 100%;
   height: 40px;
-  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+  z-index: 1000;/* Asegura que esté por encima de otros elementos */
 }
 
 /* Estilos para la barra de navegacion */
@@ -43,39 +43,45 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
-  background-color: #282f4415;
+  background-color: #282f445f;
+  backdrop-filter: blur(10px);
   font-size: 1.2rem;
   color: #ffffff;
-  /*border-bottom: 1px solid rgba(255, 255, 255, 0.4); 
-  /*box-shadow: 0px 0px 10px #00000080;*/
+  /*border-bottom: 1px solid rgba(255, 255, 255, 0.4); */
+  box-shadow: 0px 0px 10px #00000067;
   z-index: 999; /* Mayor valor de z-index para asegurar que esté sobre el fondo */
   /*transition: top 0.5s ease;*/
- 
+
 }
 
 nav::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 5%; /* Centrar la línea */
-  width: 85%; /* 85% del ancho */
+  left: 5%;
+  /* Centrar la línea */
+  width: 85%;
+  /* 85% del ancho */
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 
 nav ul {
-  display: flex; /*se ubica en línea la lista*/
+  display: flex;
+  /*se ubica en línea la lista*/
   margin: 0;
   padding: 100px;
 }
 
 nav ul li {
-  list-style: none; /*se eliminan las viñetas de los elementos de la lista*/
+  list-style: none;
+  /*se eliminan las viñetas de los elementos de la lista*/
   margin: 0 25px;
 }
 
 nav ul li a {
-  text-decoration: none; /*se elimina el subrayado a los elementos*/
+  text-decoration: none;
+  /*se elimina el subrayado a los elementos*/
   color: #ffffff;
 }
 
@@ -84,11 +90,12 @@ nav ul li a:hover {
 }
 
 .logo {
- width: 160px;
+  width: 160px;
 }
 
 .nav-izquierda {
-  display: flex; /*para mantener el logo y los elementos juntos a la izquierda */
+  display: flex;
+  /*para mantener el logo y los elementos juntos a la izquierda */
   align-items: center;
   margin-left: -160px;
 }
@@ -100,7 +107,8 @@ nav ul li a:hover {
 
 /* Contenedor del input */
 .contenedor-input {
-  position: relative; /* Para posicionar el ícono dentro del input */
+  position: relative;
+  /* Para posicionar el ícono dentro del input */
   display: flex;
   align-items: center;
 }
@@ -141,7 +149,8 @@ input::placeholder {
 .slider {
   position: relative;
   width: 100%;
-  height: 100vh; /* Ajusta según tus necesidades */
+  height: 100vh;
+  /* Ajusta según tus necesidades */
   overflow: hidden;
 }
 
@@ -153,23 +162,27 @@ input::placeholder {
 
 .slide img {
   width: 100%;
-  height: auto; /* Asegura que las imágenes mantengan su relación de aspecto */
-  display: block; /* Para eliminar espacio en la parte inferior */
+  height: auto;
+  /* Asegura que las imágenes mantengan su relación de aspecto */
+  display: block;
+  /* Para eliminar espacio en la parte inferior */
 }
 
-.slider-wrapper{ /* "envoltorio de las imágenes del slider dispuestas en un grid de 3 columnas*/
-    display: grid;
-    grid-template-columns: repeat(3, 100%);
-    transition: transform 1s ease-in-out; /* Transición suave para el efecto del slider */
+.slider-wrapper {
+  /* "envoltorio de las imágenes del slider dispuestas en un grid de 3 columnas*/
+  display: grid;
+  grid-template-columns: repeat(3, 100%);
+  transition: transform 1s ease-in-out;
+  /* Transición suave para el efecto del slider */
 }
 
 .contenedor {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   width: 100%;
   height: 100vh;
-  margin-top:40px;
+  margin-top: 40px;
   position: relative;
   overflow: hidden;
   background-image: url(../img/imgen1.jpg);
@@ -179,16 +192,17 @@ input::placeholder {
 
 .contenedor {
   img {
-    margin-top:24px;
+    margin-top: 24px;
     width: 430px;
-    z-index: 5; /* para que quede por encima del overlay*/
-   }
+    z-index: 5;
+    /* para que quede por encima del overlay*/
+  }
 }
 
-.contenedor__secundario{
+.contenedor__secundario {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   background-position: center start;
   width: 100%;
   height: 100vh;
@@ -200,19 +214,19 @@ input::placeholder {
   background-size: cover;
 }
 
-.contenedor__secundario{
-  img{
-   margin-top: 2.5rem;
-   width: 18rem;
-   z-index: 5;
- 
-   }
+.contenedor__secundario {
+  img {
+    margin-top: 2.5rem;
+    width: 18rem;
+    z-index: 5;
+
+  }
 }
 
-.contenedor__terciario{
+.contenedor__terciario {
   display: flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   background-position: center start;
   width: 100%;
   height: 100vh;
@@ -223,13 +237,14 @@ input::placeholder {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.contenedor__terciario{
-  img{
-   margin-top: 2.5rem;
-   width: 16rem;
-   z-index: 5;
-   
-   }
+
+.contenedor__terciario {
+  img {
+    margin-top: 2.5rem;
+    width: 16rem;
+    z-index: 5;
+
+  }
 }
 
 .superponer {
@@ -239,34 +254,37 @@ input::placeholder {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
-  z-index: 4; /* Para que el oscurecimiento esté sobre el video/imagen */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+  z-index: 4;
+  /* Para que el oscurecimiento esté sobre el video/imagen */
 }
 
 .content {
   position: relative;
-  z-index: 5; /* Contenido por encima de la imagen */
+  z-index: 5;
+  /* Contenido por encima de la imagen */
   color: rgb(255, 255, 255);
   font-optical-sizing: auto;
   padding: 16px;
- }
+}
 
 .content {
   h1 {
     font-size: 3rem;
-   }
+  }
+
   p {
-  margin-top: 24px;
-  margin-bottom: 24px;
-  font-size: 1.5rem;
- 
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 1.5rem;
+
   }
 }
 
 .btnMain, .btnMain_1, .btnComprar {
   font-size: 1rem;
   padding: 10px 20px;
-  border: 2px solid #39f2ae ;
+  border: 2px solid #39f2ae;
   border-radius: 1rem;
   width: 180px;
   cursor: pointer;
@@ -274,14 +292,14 @@ input::placeholder {
 }
 
 .btnMain {
-  background-color:#39f2ae8e;
+  background-color: #39f2ae8e;
   /*box-shadow: 1px 1px 5px #39f2ae;*/
   margin-right: 32px;
 }
 
 .btnMain_1, .btnComprar {
   background-color: transparent;
- 
+
 }
 
 .btnMain a, .btnMain_1 a, .btnComprar a {
@@ -291,22 +309,23 @@ input::placeholder {
 
 /***** Seccion destacados****/
 .headline {
-  padding-top: 50px; 
-  padding-left: 160px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 110px;
   font-size: 2rem;
-  color:#ffffff;
+  color: #ffffff;
   /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra suave negra */
- }
-
-.all-products{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-  flex-wrap: wrap;
-  background-color: #323941;
 }
 
-.product{
+.all-products {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.product {
   width: 300px;
   display: flex;
   flex-direction: column;
@@ -314,52 +333,52 @@ input::placeholder {
   align-items: center;
   text-align: center;
   padding: 32px;
-  margin:32px;
-	overflow: hidden;
-	color: #39f2ae;
-	border-radius: 18px;
-	box-shadow: inset 0 0 10px 0 #39f2ae; 
+  overflow: hidden;
+  color: #39f2ae;
+  border-radius: 18px;
+  box-shadow: inset 0 0 10px 0 #39f2ae;
 }
 
 .product-title {
-	font-size: 1.2rem;
+  font-size: 1.2rem;
 }
 
-.product-price  {
- font-style:oblique;
- position: relative;/*recordá que esto es relativo a su posicion original*/
- top: -270px; 
- left: -60px;
- color:#ffffff;
- background-color: #39f2ae62; 
- box-shadow: 1px 1px 5px #39f2ae;
- padding: 5px;
- }
-
- .product-shipping{
+.product-price {
   font-style: oblique;
-  color:#b1b5c0;
+  position: relative;
+  /*recordá que esto es relativo a su posicion original*/
+  top: -270px;
+  left: -60px;
+  color: #ffffff;
+  background-color: #39f2ae62;
+  box-shadow: 1px 1px 5px #39f2ae;
+  padding: 5px;
+}
+
+.product-shipping {
+  font-style: oblique;
+  color: #b1b5c0;
   padding: 3px;
 }
 
-.product:hover img{
-	scale:  1.1;
+.product:hover img {
+  scale: 1.1;
 }
 
 .product img {
-	width:200px;
-	margin: 16px;
+  width: 200px;
+  margin: 16px;
   transition: all 0.3s;
 }
 
-.product-btn  {
-	display: inline-block;
-	border: 2px solid #39f2ae;
-  background-color:#323941;
-	padding: 10px 20px;
-	border-radius: 16px;
-	margin-top: 16px;
-	font-size: 1.2rem;
+.product-btn {
+  display: inline-block;
+  border: 2px solid #39f2ae;
+  background-color: #323941;
+  padding: 10px 20px;
+  border-radius: 16px;
+  margin-top: 16px;
+  font-size: 1.2rem;
   transition: all 0.2s;
 }
 
@@ -369,16 +388,16 @@ input::placeholder {
 }
 
 .product-btn:hover {
- transform: scale(1.1);
- }
+  transform: scale(1.1);
+}
 
 /*estilos para la seccion colecciones*/
 .coleccion-container {
-  width: 90%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;/*tengo dos columnas de una fracción c/u*/
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  margin-top: 40px;
 }
 
 .hombre, .mujer {
@@ -387,10 +406,9 @@ input::placeholder {
 }
 
 .hombre img, .mujer img {
-  width: 100%;/*me ocupan todo el ancho disponible de la columna*/
-  object-fit: cover;
+  width: 640px;
   opacity: 0.9;
- }
+}
 
 .hombre h1, .mujer h1 {
   position: absolute;
@@ -401,14 +419,14 @@ input::placeholder {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
- 
 }
 
 .btn {
   position: absolute;
-  top: 80%; 
+  top: 80%;
   left: 50%;
-  transform: translateX(-50%); /*corrige 50% para la izquierda*/
+  transform: translateX(-50%);
+  /*corrige 50% para la izquierda*/
   background-color: transparent;
   color: #ffffff;
   font-size: 1.2rem;
@@ -426,32 +444,33 @@ input::placeholder {
 
 /*Estilos seccion categorias*/
 .categorias_container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  width: 90%;
-  justify-content: center;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  margin: 16px auto;
-  gap: 20px;
+}
+
+.categorias_headline {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+  font-size: 2rem;
+  color: #ffffff;
 }
 
 .categoria {
-  position:relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   overflow: hidden;
-  transition:  ease 0.5s;
+  transition: ease 0.5s;
   cursor: pointer;
- }
+}
 
 .categoria img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 220px;
   aspect-ratio: 2/3;
   transition: 0.5s ease;
+  /*box-shadow: 3px 3px 5px #b1b5c0;*/
 }
+
 .categoria:hover {
   transform: scale(1.03);
 }
@@ -461,32 +480,34 @@ input::placeholder {
   top: 16px;
   left: 0;
   right: 0;
-  border-top: 1px solid #39f2ae;
-  border-bottom:1px solid #39f2ae;
-  background: rgba(255, 255, 255, 0.227); /* Fondo semitransparente para el texto */
-  color:#ffffff;
-  padding: 0.625rem;
-  z-index:1; /* Me aseguro de que el texto quede por encima de la imagen */
+  border-top: 2px solid #39f2ae;
+  border-bottom: 2px solid #39f2ae;
+  background: rgba(255, 255, 255, 0.227);
+  /* Fondo semitransparente para el texto */
+  color: #ffffff;
+  padding: 10px;
+  z-index: 1;
+  /*Me aseguro de que el texto quede por encima de la imagen */
   text-align: center;
   font-size: 1.5rem;
+  backdrop-filter: blur(5px);
 }
-
 
 /**Estilos sección servicios**/
 .servicios {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin: 0 auto;/* Centra el contenedor */
   align-items: center;
-  background-color:#b1b5c0;
-  padding: 32px 0;
+  background-color: #b1b5c0;
+  padding: 32px;
+  margin-top: 40px;
 }
 
-.servicios{
-  i{ 
-    padding:28px;
-    color:#39f2ae;
-    filter:drop-shadow(1px 1px 3px black)
+.servicios {
+  i {
+    padding: 28px;
+    color: #39f2ae;
+    filter: drop-shadow(1px 1px 3px black)
   }
 }
 
@@ -515,7 +536,7 @@ input::placeholder {
   width: 100%;
   gap: 20px;
   background-color: #2f4858;
-  color:#b1b5c0
+  color: #b1b5c0
 }
 
 .arriba-izq {
@@ -523,7 +544,7 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top:32px;
+  padding-top: 32px;
 }
 
 .arriba-izq ul {
@@ -539,14 +560,14 @@ input::placeholder {
   grid-area: arriba-der;
   padding-top: 32px;
   align-items: center;
-  
+
 }
 
 .newsletter {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding:16px;
+  padding: 16px;
 }
 
 .newsletter i {
@@ -568,9 +589,9 @@ input::placeholder {
   width: 200px;
   background-color: #30353c;
   color: #ffff;
- }
+}
 
- .btnEmail {
+.btnEmail {
   background-color: #39f2ae91;
   color: #ffffff;
   font-size: 1rem;
@@ -578,13 +599,13 @@ input::placeholder {
   border: 1px solid #39f2ae;
   border-radius: 8px;
   cursor: pointer;
-  }
+}
 
 .centro-izq {
   grid-area: centro-izq;
   align-items: center;
   text-align: center;
- 
+
 }
 
 .centro-izq ul {
@@ -596,14 +617,14 @@ input::placeholder {
   font-size: 1.2rem;
   font-weight: bold;
   margin-bottom: 16px;
-  color:#39f2ae;
+  color: #39f2ae;
 }
 
 .centro-medio {
   grid-area: centro-medio;
   align-items: center;
   text-align: center;
-  
+
 }
 
 .centro-medio ul {
@@ -612,7 +633,7 @@ input::placeholder {
 
 .centro-der {
   grid-area: centro-der;
- 
+
   color: #ffffff;
 }
 
@@ -621,9 +642,10 @@ input::placeholder {
   height: auto;
   padding: 1rem;
 }
-.footer-container{
-  i{
-    color:#39f2ae;
+
+.footer-container {
+  i {
+    color: #39f2ae;
   }
 }
 
@@ -632,10 +654,10 @@ input::placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3E4C59  ;
+  background-color: #3E4C59;
   border-top: 1px solid #39f2ae;
 }
 
 .abajo-content {
-  color:#A0A4A8 ;
+  color: #A0A4A8;
 }
