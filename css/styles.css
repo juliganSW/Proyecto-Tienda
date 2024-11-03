@@ -177,11 +177,11 @@ input::placeholder {
   p {
     margin-top: 24px;
     margin-bottom: 24px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
  }
 }
 
-.btnMain, .btnMain_1, .btnComprar {
+.btnMain {
   font-size: 1rem;
   padding: 10px 20px;
   border: 2px solid #39f2ae;
@@ -189,22 +189,20 @@ input::placeholder {
   width: 180px;
   cursor: pointer;
   margin-top: 32px;
-}
-
-.btnMain {
-  background-color: #39f2ae8e;
+  background-color: transparent;
   /*box-shadow: 1px 1px 5px #39f2ae;*/
   margin-right: 32px;
 }
 
-.btnMain_1, .btnComprar {
-  background-color: transparent;
-
-}
-
-.btnMain a, .btnMain_1 a, .btnComprar a {
+.btnMain a {
   text-decoration: none;
   color: #ffffff;
+}
+.btnMain:hover { /*sombra de cuatro capas*/
+  box-shadow: 0 0 0px 1px #39f2ae,
+  0 0 10px 2px #39f2ae,
+  inset 0 0 0px 1px #39f2ae,
+  inset 0 0 15px 2px #39f2ae;
 }
 
 /***** Seccion destacados****/
@@ -245,15 +243,14 @@ input::placeholder {
   position: absolute;
   top: 10px; 
   left: 10px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .fa-heart:hover {
-  color:#ffffff;
- 
+   scale: 1.2;
 }
-
 
 .product-title {
   font-size: 1.2rem;
@@ -277,11 +274,11 @@ input::placeholder {
 .product img {
   width: 180px;
   margin: 10px;
-  transition: all 0.3s;
+  transition: ease 0.3s;
 }
 
 .product:hover img {
-  scale: 1.2;
+  scale:1.2;
 }
 
 .product-btn {
@@ -292,7 +289,7 @@ input::placeholder {
   border-radius:10px 32px;
   margin-top: 16px;
   font-size: 1rem;
-  transition: all 0.2s;
+  
 }
 
 .product-btn a {
@@ -381,8 +378,7 @@ input::placeholder {
 .categoria img {
   width: 220px;
   aspect-ratio: 2/3;
-  transition: 0.5s ease;
-  /*box-shadow: 3px 3px 5px #b1b5c0;*/
+ /*box-shadow: 3px 3px 5px #b1b5c0;*/
 }
 
 .categoria:hover {
@@ -422,7 +418,6 @@ input::placeholder {
     filter: drop-shadow(1px 1px 3px black)
   }
 }
-
 
 .columna-izq {
   text-align: center;
@@ -515,6 +510,7 @@ input::placeholder {
   border-radius: 8px;
   cursor: pointer;
 }
+
 .list-title {
   text-align: center;
   font-size: 1rem;
@@ -536,6 +532,7 @@ input::placeholder {
  text-align: left;
   }
 }
+
 .centro-izq{
   li{
     padding-bottom: 10px;
@@ -646,10 +643,7 @@ list-style: none;
   justify-content: center;
   align-items: center;
   overflow: hidden;
- 
-}
-
-
+ }
 
 .contacto_img {
   width: 100%;
@@ -665,7 +659,6 @@ list-style: none;
   flex-direction: column;
   padding: 0 1.5rem; /* Reducción del padding en los lados */
   color:#f5f5f5f5;
-  
 }
 
 .contacto_titulo{
@@ -705,7 +698,6 @@ list-style: none;
 .contacto_label {
   font-size: 18px;
   font-weight: 600;
- 
 }
 
 select.custom {
@@ -716,7 +708,6 @@ select.custom {
   border: 2px solid #39f2ae;
   color:#f5f5f5;
   background-color: #323941;
-  
 }
 
 .contacto_input_textArea{
@@ -752,7 +743,7 @@ select.custom {
 }
 /***********Fin de página de contacto**********/
 
-/***********Inicio pagína colecciones**********/
+/***********Inicio pagína coleccion mujer**********/
 .header {
   top:0;
   position:sticky;
@@ -762,7 +753,6 @@ select.custom {
   align-items: center;
   justify-content: space-between;
   z-index:1000;
-  
 }
 
 .navbar {
@@ -780,7 +770,7 @@ select.custom {
   width: 100%;
   height: 65vh;
   overflow: hidden;
-  background-image: url(../assets/img/aditya-saxena-_mIXHvl_wzA-unsplash\ \(1\).jpg);
+  background-image: url(../assets/img/banner_mujer_new.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display:flex;
@@ -799,6 +789,26 @@ select.custom {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   z-index: 4; /*Para que el oscurecimiento esté sobre la imagen de fondo */
 }
+
+/***********Fin de la página coleccion mujer**********/
+
+/***********Inicio de la página coleccion hombre**********/
+.bannerMan {
+  width: 100%;
+  height: 65vh;
+  overflow: hidden;
+  background-image: url(../assets/img/banner_hombre.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+
 
 
 
