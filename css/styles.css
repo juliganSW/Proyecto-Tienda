@@ -89,45 +89,6 @@ nav ul li a:hover {
   align-items: center;
 }
 
-/* Contenedor del input */
-.contenedor-input {
-  position: relative; /* Para poder posicionar el ícono dentro del input */
-  display: flex;
-  align-items: center;
-}
-
-/* Estilo de la barrita de búsqueda */
-.input-search {
-  width: 160px;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 1rem;
-  outline: none;
-  transition: width 0.4s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: #ffffff;
-}
-
-input::placeholder {
-  color: rgba(255, 255, 255, 0.478);
-}
-
-
-/* Ícono de lupa */
-.search-icon {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 1.2rem;
-  color: #ffff;
-}
-
-/*Al enfocar se extiende la barra de búsqueda */
-.input-search:focus {
-  width: 250px;
-}
-
 .contenedor {
   display: flex;
   align-items: center;
@@ -145,7 +106,7 @@ input::placeholder {
 .contenedor { /*contenedor que aloja la imagen del reloj sobre el fondo*/
   img {
     margin-top: 24px;
-    width: 430px;
+    width: 220px;
     z-index: 5; /*para que quede por encima del overlay*/
   }
 }
@@ -166,38 +127,36 @@ input::placeholder {
   z-index: 5; /*Contenido por encima de la imagen de fondo */
   color: rgb(255, 255, 255);
   font-optical-sizing: auto;
-  padding: 16px;
 }
 
 .content {
   h1 {
     font-size: 3rem;
-  }
-
+    line-height: 1.3;
+   }
   p {
-    margin-top: 24px;
-    margin-bottom: 24px;
-    font-size: 1.2rem;
- }
+  font-size: 1.2rem;
+  }
 }
 
 .btnMain {
+  margin-top: 32px;
   font-size: 1rem;
   padding: 10px 20px;
   border: 2px solid #39f2ae;
   border-radius: 1rem;
   width: 180px;
   cursor: pointer;
-  margin-top: 32px;
   background-color: transparent;
   /*box-shadow: 1px 1px 5px #39f2ae;*/
-  margin-right: 32px;
+  /*margin-right: 32px;*/
 }
 
 .btnMain a {
   text-decoration: none;
   color: #ffffff;
 }
+
 .btnMain:hover { /*sombra de cuatro capas*/
   box-shadow: 0 0 0px 1px #39f2ae,
   0 0 10px 2px #39f2ae,
@@ -209,7 +168,7 @@ input::placeholder {
 .headline {
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 110px;
+  padding-left: 40px;
   font-size: 2rem;
   color: #ffffff;
   /*text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombra suave negra */
@@ -235,9 +194,9 @@ input::placeholder {
   color: #39f2ae;
   border-radius: 10px 32px;
   border: 2px solid #39f2ae;
-  /*box-shadow: 1px 1px 10px #39f2ae inset;*/
   position: relative;/* me sirve para poder posicionar el ícono del fav*/
 }
+
 /*corazoncito de favorito*/
 .fa-heart {
   position: absolute;
@@ -289,7 +248,6 @@ input::placeholder {
   border-radius:10px 32px;
   margin-top: 16px;
   font-size: 1rem;
-  
 }
 
 .product-btn a {
@@ -324,7 +282,7 @@ input::placeholder {
 
 .hombre h1, .mujer h1 {
   position: absolute;
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
   color: rgba(255, 255, 255, 0.806);
   top: 50%;
@@ -333,14 +291,14 @@ input::placeholder {
   z-index: 1;
 }
 
-.btn {
+.btnColeccion {
   position: absolute;
   top: 80%;
   left: 50%;
   transform: translateX(-50%); /*corrige 50% para la izquierda*/
   background-color: transparent;
   color: #ffffff;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 10px 20px;
   border: 2px solid #39f2ae;
   border-radius: 16px;
@@ -348,9 +306,17 @@ input::placeholder {
   cursor: pointer;
 }
 
-.btn a {
+.btnColeccion a {
   text-decoration: none;
   color: #ffffff;
+}
+
+.btnColeccion:hover {
+  box-shadow: 0 0 0px 1px #39f2ae,
+    0 0 10px 2px #39f2ae,
+    inset 0 0 0px 1px #39f2ae,
+    inset 0 0 15px 2px #39f2ae;
+
 }
 
 /*Estilos seccion categorias*/
@@ -360,29 +326,22 @@ input::placeholder {
   align-items: center;
 }
 
-.categorias_headline {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-  font-size: 2rem;
-  color: #ffffff;
-}
-
 .categoria {
   position: relative;
   overflow: hidden;
-  transition: ease 0.5s;
+  transition: transform 0.3s ease; 
   cursor: pointer;
+  
 }
 
 .categoria img {
-  width: 220px;
+  width: 230px;
   aspect-ratio: 2/3;
- /*box-shadow: 3px 3px 5px #b1b5c0;*/
+  border-radius: 10px;
 }
 
 .categoria:hover {
-  transform: scale(1.03);
+  transform: scale(1.1); 
 }
 
 .categoria h2 {
@@ -394,12 +353,33 @@ input::placeholder {
   border-bottom: 2px solid #39f2ae;
   background: rgba(255, 255, 255, 0.227); /* Fondo semitransparente para el texto */
   color: #ffffff;
-  padding: 10px;
   z-index: 1; /*Me aseguro de que el texto quede por encima de la imagen */
   text-align: center;
   font-size: 1.5rem;
   backdrop-filter: blur(5px);
 }
+/** Estilos para la seccion de marcas **/
+.contenedorMarcas {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin:0 auto;
+  gap:20px;
+   .boxMarcas {
+    width: 180px;
+    height: 100px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 10px #39f2ae8f;
+}
+  img{
+    width: 100px;
+ }
+}
+
 
 /**Estilos sección servicios**/
 .servicios {
@@ -511,6 +491,15 @@ input::placeholder {
   cursor: pointer;
 }
 
+.btnEmail:hover {
+  background-color:transparent;
+  box-shadow: 0 0 0px 1px #39f2ae,
+    0 0 10px 2px #39f2ae,
+    inset 0 0 0px 1px #39f2ae,
+    inset 0 0 10px 2px #39f2ae;
+  
+}
+
 .list-title {
   text-align: center;
   font-size: 1rem;
@@ -573,6 +562,11 @@ list-style: none;
 
 .fa-brands {
     color: #39f2ae;
+    cursor:pointer;
+}
+  
+.fa-brands:hover{
+  color:#a0a4a8;
 }
 
 .abajo {
@@ -623,35 +617,39 @@ list-style: none;
 
 /* Estilos para la barra de navegacion */
 
-.contacto{ /*contenedor de la sección contacto*/
-  width: 50%;
+/*contenedor de la sección contacto*/
+.contacto{ 
+  width :60%;
   padding: 1.5rem;
   max-width: 900px; /* Establece un ancho máximo */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin:240px auto;
+  margin:200px auto;
   box-shadow: 0 0 10px 0 #39f2ae;
   border-radius: 25px;
   background-color:#323941;
  
 }
 
-.contenedor_img { /*contenedor de la izquierda que aloja a la imagen */
+/*contenedor de la izquierda que aloja a la imagen */
+.contenedor_img { 
   width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  
  }
 
 .contacto_img {
-  width: 100%;
+  width:100%;
   height: auto;
   object-fit: cover;
 }
 
-.contenedor_form{/*contenedor de la derecha que aloja al formulario*/
+/*contenedor de la derecha que aloja al formulario*/
+.contenedor_form{
   width: 50%;
   display: flex;
   justify-content: center;
@@ -669,7 +667,8 @@ list-style: none;
   text-transform: uppercase;
 }
 
-.contacto_form { /* estilos para el formulario */
+ /* estilos para el formulario */
+.contacto_form {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -768,14 +767,15 @@ select.custom {
 
 .banner {
   width: 100%;
-  height: 65vh;
+  height: 60vh;
   overflow: hidden;
   background-image: url(../assets/img/banner_mujer_new.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display:flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
+  padding-bottom: 32px;
   position: relative;
 }
 
@@ -784,27 +784,42 @@ select.custom {
   top: 0;
   left: 0;
   width: 100%;
-  height: 65vh;
+  height: 60vh;
   object-fit: cover;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3));
   z-index: 4; /*Para que el oscurecimiento esté sobre la imagen de fondo */
 }
+
+.mainText {
+  color: #ffffff;
+  font-size: 1.3rem;
+  text-align: center;
+  line-height: 1.6;
+  padding:0 32px 40px 32px ;
+
+}
+
 
 /***********Fin de la página coleccion mujer**********/
 
 /***********Inicio de la página coleccion hombre**********/
 .bannerMan {
   width: 100%;
-  height: 65vh;
+  height: 60vh;
   overflow: hidden;
   background-image: url(../assets/img/banner_hombre.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
   display:flex;
-  justify-content: center;
-  align-items: center;
+  justify-content:center;
+  align-items: end;
+  padding-bottom:32px;
   position: relative;
+}
+/*espacio entre la seccion productos y el footer*/
+.margenAbajo {
+  margin-bottom: 80px;
 }
 
 
