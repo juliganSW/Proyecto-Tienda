@@ -90,9 +90,10 @@ nav ul li a:hover {
 }
 
 .contenedor {
-  display: flex;
+  display: grid;
+  grid-template-columns: 0.6fr 1fr;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100%;
   height: 100vh;
   margin-top: 40px;
@@ -103,13 +104,31 @@ nav ul li a:hover {
   background-size: cover;
 }
 
-.contenedor { /*contenedor que aloja la imagen del reloj sobre el fondo*/
+.contenedorImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 5; 
+  color: rgb(255, 255, 255);
+  font-optical-sizing: auto;
+}
+
+.contenedorImg{
+   img{
+    margin-top:24px;
+    width:220px;
+    z-index: 5;
+  }
+}
+
+/* .contenedor { 
   img {
     margin-top: 24px;
     width: 220px;
-    z-index: 5; /*para que quede por encima del overlay*/
+    z-index: 5; 
   }
-}
+} */
 
 .superponer {
   position: absolute;
@@ -124,32 +143,33 @@ nav ul li a:hover {
 
 .content {
   position: relative;
-  z-index: 5; /*Contenido por encima de la imagen de fondo */
+  z-index: 5; 
   color: rgb(255, 255, 255);
   font-optical-sizing: auto;
-}
+} 
 
-.content {
+ .content {
   h1 {
     font-size: 3rem;
     line-height: 1.3;
    }
   p {
   font-size: 1.2rem;
+  line-height: 1.3;
+  text-align:left;
+  padding-right: 64px;
   }
-}
+} 
 
 .btnMain {
   margin-top: 32px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 10px 20px;
   border: 2px solid #39f2ae;
   border-radius: 1rem;
   width: 180px;
   cursor: pointer;
   background-color: transparent;
-  /*box-shadow: 1px 1px 5px #39f2ae;*/
-  /*margin-right: 32px;*/
 }
 
 .btnMain a {
@@ -264,26 +284,34 @@ nav ul li a:hover {
 
 /*estilos para la seccion colecciones*/
 .coleccion-container {
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   overflow: hidden;
+  background-color: white;
+  box-shadow: 0px 0px 10px #00000067;
 }
 
 .hombre, .mujer {
-  position: relative;
+ position: relative;
   overflow: hidden;
 }
 
 .hombre img, .mujer img {
-  width: 640px;
+  display: flex;
+  align-items: center;
+  width:640px;
   opacity: 0.9;
+  object-fit: cover;
 }
 
-.hombre h1, .mujer h1 {
+.hombre h2, .mujer h2 {
   position: absolute;
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
+  line-height: 1.2;
   color: rgba(255, 255, 255, 0.806);
   top: 50%;
   left: 50%;
@@ -298,7 +326,7 @@ nav ul li a:hover {
   transform: translateX(-50%); /*corrige 50% para la izquierda*/
   background-color: transparent;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 10px 20px;
   border: 2px solid #39f2ae;
   border-radius: 16px;
@@ -321,8 +349,10 @@ nav ul li a:hover {
 
 /*Estilos seccion categorias*/
 .categorias_container {
+  width: 90%;
   display: flex;
   justify-content: space-evenly;
+  margin: 0 auto ;
   align-items: center;
 }
 
@@ -331,7 +361,6 @@ nav ul li a:hover {
   overflow: hidden;
   transition: transform 0.3s ease; 
   cursor: pointer;
-  
 }
 
 .categoria img {
@@ -358,6 +387,44 @@ nav ul li a:hover {
   font-size: 1.5rem;
   backdrop-filter: blur(5px);
 }
+
+/**seccion Nosotros**/
+.nosotrosContainer {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  background-color: #b1b5c0;
+  box-shadow: 0px 0px 10px #00000067;
+}
+
+.nosotrosImg{
+  display: flex;
+  align-items: center;
+  img {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 2/2;
+  }
+}
+
+.nosotrosTexto {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  h2 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  p{
+    font-size: 1rem;
+  }
+
+  }
+
 /** Estilos para la seccion de marcas **/
 .contenedorMarcas {
   width: 90%;
